@@ -280,7 +280,7 @@ head(as.data.frame(tracks))
 
 # align move_data to a uniform time scale
 # m <- moveVis::align_move(tracks, res = 'mean', unit = "days")
-m <- moveVis::align_move(tracks, res = 2, unit = "days")
+m <- moveVis::align_move(tracks, res = 1, unit = "days")
 head(m)
 str(m)
 
@@ -395,6 +395,7 @@ m@bbox
 
 get_maptypes()
 
+mb_token = "pk.eyJ1IjoiaW5nby1tIiwiYSI6ImNrYnAwa2tjZTFlN3MzNnI1bWQzeWVicTcifQ.s-9n23Ws6rsl02ZE6Jp2Dg" # need to get your iown otherwise it costs me!!!
 
 
 frames <- moveVis::frames_spatial(m,
@@ -403,20 +404,21 @@ frames <- moveVis::frames_spatial(m,
                                   map_type = "world_imagery",
                                   # map_service = "mapbox",
                                   # map_type = "satellite",
-                                  # map_token = "pk.eyJ1IjoiaW5nby1tIiwiYSI6ImNrYnAwa2tjZTFlN3MzNnI1bWQzeWVicTcifQ.s-9n23Ws6rsl02ZE6Jp2Dg",
+                                  map_token = mb_token, # my mapbox token
+                                  map_dir = "map_tiles", # so it doesn't have to downlaod all over agin next time ;)
                                   map_res = 1,
                                   alpha = 1, 
                                   #ext = sf_extent,
                                   #margin_factor = 1.1,
                                   path_legend = FALSE, 
                                   path_legend_title = "Whale shark\nName", 
-                                  path_size = 1.15, 
+                                  path_size = 2, 
                                   path_end = 'round', 
                                   path_join = 'round', 
                                   trace_show = TRUE,
                                   trace_colour = "white",
                                   tail_colour = "white",
-                                  tail_size = 0.2,
+                                  tail_size = 0.4,
                                   equidistant = FALSE,
                                   cross_dateline = FALSE) |> 
   # add_labels(title = "Whale shark tracks - 2 months post-tagging",
@@ -428,7 +430,6 @@ frames <- moveVis::frames_spatial(m,
   # add_gg(gg = expr(scale_x_continuous(breaks = seq(145, 147, by = 1)))) |>
   # add_gg(gg = expr(scale_y_continuous(breaks = seq(-25, 0, by = 5)))) |>
   add_progress() 
-
 
 
 
@@ -513,21 +514,20 @@ frames2 <- frames |>
   add_gg(gg = expr(annotation_custom(logo_grob, xmin = 143.5, xmax = 145.5, ymin = -20, ymax = -18))) |>
   #add_gg(gg = expr(annotation_custom(ws_grob, xmin = 143, xmax = 145.5, ymin = -19, ymax = -15))) |>
   add_gg(gg = expr(guides(linetype = "none"))) |> 
-  add_scalebar(colour = "black", distance = 200, units = "km", x=143.7, y=-19.7, height = 0.01,) |> 
+  add_scalebar_custom(colour = "black", distance = 200, units = "km", x=143.7, y=-19.7, height = 0.01, text_size = 6) |> 
   #add_northarrow(colour = "black", x=146, y=-20.3) |> 
-  add_timestamps(type = "label", size = 5, x = 144.7, y = -9.5) |> 
+  add_timestamps(type = "label", size = 10, x = 144.7, y = -9.5) |> 
   add_text_manual("Cairns", y = -16.918246,  x = 145.771359,
-           colour = "white", size = 4, fontface = "bold") |> 
+           colour = "white", size = 8, fontface = "bold") |> 
   add_text_manual("Townsville", y = -19.289030, x = 146.768921,
-           colour = "white", size = 4, fontface = "bold") |> 
+           colour = "white", size = 8, fontface = "bold") |> 
   add_text_manual("Port\nMoresby", y = -9.7, x = 148,
-           colour = "white", size = 4, fontface = "bold") |> 
+           colour = "white", size = 8, fontface = "bold") |> 
   add_text_manual("Coral Sea", y = -14, x = 147,
-           colour = "blue", size = 4, type = "label", fontface = "bold.italic") |> 
+           colour = "blue", size = 8, type = "label", fontface = "bold.italic") |> 
   add_gg(gg = expr(theme(axis.title = element_blank()))) |> 
   add_gg(gg = expr(theme(axis.text = element_blank()))) |> 
   add_gg(gg = expr(theme(axis.ticks = element_blank())))
-
 
 
 
@@ -542,9 +542,9 @@ frames2[[25]]
 #                width = 1400,
 #                height = 2000)
 
-animate_frames(frames2, out_file = "Whale_Sharks_2024_Animation_20250212_IG-Reel_mapbox_I.Miller.mov", end_pause = 0, overwrite=TRUE, res=200, fps = 5,
-               width = 1400,
-               height = 2000)
+animate_frames(frames2, out_file = "Output_Folder/Whale_Sharks_2024_Animation_20250212_IG-Reel_I.Miller.mov", end_pause = 0, overwrite=TRUE, res=300, fps = 5,
+               width = 2800,
+               height = 4400)
 
 
 
