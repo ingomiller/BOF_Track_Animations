@@ -74,7 +74,7 @@ sharks2 <- sharks |>
 
 
 
-str(sharks)
+str(sharks2)
 
 
 str(METAFILE)
@@ -124,7 +124,7 @@ str(meta_whalesharks)
 str(sharks)
 
 
-unique(sharks$id)
+unique(sharks2$id)
 unique(meta_whalesharks$Sat_PTT)
 unique(meta_whalesharks$id)
 unique(meta_whalesharks$Name)
@@ -264,7 +264,7 @@ saveRDS(crw_locs_meta_f, "WhaleSharkTracks_SPOT_SPLASH_20250212.rds")
 
 
 # locs <- readRDS("WhaleSharkTracks_SPOT_SPLASH_20250128.rds")
-locs <- readRDS("WhaleSharkTracks_SPOT_SPLASH_20250212.rds")
+locs <- readRDS("WhaleSharkTracks_SPOT_SPLASH_20250128.rds")
 str(locs)
 
 locs_2024 <- locs |> 
@@ -276,12 +276,13 @@ tracks <- moveVis::df2move(locs_2024,
                            x = "lon", y = "lat", time = "date", track_id = "Name")
 
 str(tracks)
-head(tracks)
+head(as.data.frame(tracks))
 
 # align move_data to a uniform time scale
 # m <- moveVis::align_move(tracks, res = 'mean', unit = "days")
-m <- moveVis::align_move(tracks, res = 1, unit = "days")
+m <- moveVis::align_move(tracks, res = 2, unit = "days")
 head(m)
+str(m)
 
 summary(m@timestamps)
 summary(m@data$x)
@@ -292,16 +293,16 @@ summary(m@data$y)
 # Initialize the `Name column with NA values
 m.df <- as.data.frame(m)
 # m.df$Name <- NA
-# 
-# str(m.df)
-# str(locs_2024)
 
-# # Map the `tag_loc` information from input_df to move_data
+str(m.df)
+str(locs_2024)
+
+# Map the `tag_loc` information from input_df to move_data
 # for (i in seq_len(nrow(locs_2024))) {
-#   Name <- locs_2024$Name[i]
-#   Name_value <- locs_2024$Name[i]
-#   m.df$Name[m.df$Name == Name] <- Name_value
-# }
+#    Name <- locs_2024$Name[i]
+#    Name_value <- locs_2024$Name[i]
+#    m.df$Name[m.df$Name == Name] <- Name_value
+#  }
 
 unique(m.df$trackId)
 str(m.df)
@@ -346,6 +347,36 @@ m$colour <- m.df$colour
 # m$colour <- "red"
 
 
+
+# trying to change map margins: -------------------------------------------
+
+
+
+## Customise extent to change aspect of map, and add ext = ext to frames_spatial
+# ext <- extent(m) * 1.15
+# ext
+# ext@xmin <- ext@xmin * 1.1
+# ext@xmax <- ext@xmax * 1.1
+# ext
+extent(m)
+
+# or this:
+# Define the extent coordinates (xmin, xmax, ymin, ymax)
+extent_coords <- c(141, 152, -25, 0)
+
+# Create an sf object representing the bounding box
+sf_extent <- st_as_sfc(st_bbox(c(xmin = extent_coords[1], 
+                                 xmax = extent_coords[2], 
+                                 ymin = extent_coords[3], 
+                                 ymax = extent_coords[4]), 
+                               crs = 4326))
+
+# Print the sf extent
+print(sf_extent)
+
+ext
+
+
 head(m)
 str(m)
 
@@ -353,12 +384,10 @@ m@data
 m@coords
 m@bbox
 
-# try to edit the bbox 
-# m@bbox <- matrix(c(141, -30, 152,  5), ncol = 2, 
-#                  dimnames = list(c("coords.x1", "coords.x2"), c("min", "max")))
 
 
-m@bbox
+# animation part 2 --------------------------------------------------------
+
 
 
 # create spatial frames
@@ -366,17 +395,22 @@ m@bbox
 
 get_maptypes()
 
+
+
 frames <- moveVis::frames_spatial(m,
+                                  #map_service = "osm", map_type = "streets",
                                   map_service = "esri",
                                   map_type = "world_imagery",
                                   # map_service = "mapbox",
                                   # map_type = "satellite",
-                                  map_token = "pk.eyJ1IjoiaW5nby1tIiwiYSI6ImNrYnAwa2tjZTFlN3MzNnI1bWQzeWVicTcifQ.s-9n23Ws6rsl02ZE6Jp2Dg",
+                                  # map_token = "pk.eyJ1IjoiaW5nby1tIiwiYSI6ImNrYnAwa2tjZTFlN3MzNnI1bWQzeWVicTcifQ.s-9n23Ws6rsl02ZE6Jp2Dg",
                                   map_res = 1,
                                   alpha = 1, 
+                                  #ext = sf_extent,
+                                  #margin_factor = 1.1,
                                   path_legend = FALSE, 
                                   path_legend_title = "Whale shark\nName", 
-                                  path_size = 1.2, 
+                                  path_size = 1.15, 
                                   path_end = 'round', 
                                   path_join = 'round', 
                                   trace_show = TRUE,
@@ -398,15 +432,15 @@ frames <- moveVis::frames_spatial(m,
 
 
 
-frames[[35]] # preview one of the frames, e.g. the 100th frame
+frames[[20]] # preview one of the frames, e.g. the 100th frame
 
 # add logo:
-logo_path <- "Biopixel.OceansFoundation.Logo.Final.png"  # Replace with the actual path to your logo image
+logo_path <- "Images/Biopixel.OceansFoundation.Logo.Final.png"  # Replace with the actual path to your logo image
 logo <- magick::image_read(logo_path)
 logo_grob <-  grid::rasterGrob(image = as.raster(logo), interpolate = TRUE)
 
 #add wahle sahrk scetch
-ws_path <- "WhaleShark.png"  # Replace with the actual path to your logo image
+ws_path <- "Images/WhaleShark.png"  # Replace with the actual path to your logo image
 ws_image <- magick::image_read(ws_path)
 ws_image_rotated <- ws_image |> 
   magick::image_background("none") |> 
