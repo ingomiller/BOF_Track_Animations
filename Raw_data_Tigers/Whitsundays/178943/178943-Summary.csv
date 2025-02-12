@@ -1,0 +1,2 @@
+DeployID,Ptt,Instr,SW,PercentDecoded,Passes,PercentArgosLoc,MsgPerPass,DS,DI,MinPower,AvgPower,MaxPower,MinInterval,EarliestXmitTime,LatestXmitTime,XmitDays,EarliestDataTime,LatestDataTime,DataDays,ReleaseDate,ReleaseType,DeployDate
+178943,178943,UT,1.00a,93,271,68,2,631,,,,,14,09:03:28 12-Jun-2019,21:12:33 17-Jun-2020,372,09:03:28 12-Jun-2019,21:12:33 17-Jun-2020,372,,,05:00:00 07-Jan-2016

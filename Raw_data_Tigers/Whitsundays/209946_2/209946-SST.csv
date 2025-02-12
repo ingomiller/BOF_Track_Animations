@@ -1,0 +1,3 @@
+DeployID,Ptt,DepthSensor,Instr,Date,LocationQuality,Latitude,Longitude,Depth,Temperature,Source
+209946,209946,0.500000,UT,13:00:00 25-May-2022,,,,0.0,25.8,Status
+209946,209946,0.500000,UT,08:00:00 19-Sep-2022,,,,0.0,25.3,Status

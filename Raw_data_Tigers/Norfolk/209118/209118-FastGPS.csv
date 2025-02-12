@@ -1,0 +1,5 @@
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Name,Day,Time,Count,Time Offset,LocNumber,Failures,Hauled Out,Satellites,InitLat,InitLon,InitTime,InitType,Latitude,Longitude,Height,Bad Sats,R95,Residual,Time Error,TWIC Power,Fastloc Power,Noise,Range Bits,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR,Id,Range,Signal,Doppler,CNR
+209118,21-Apr-2021,05:35:32,1,-1437.000000,,,0,3,,,,,,,,,,,,,,15,13,14235,,,,19,30977,,,,17,24477,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

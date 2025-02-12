@@ -1,0 +1,2 @@
+DeployID,Ptt,Instr,SW,PercentDecoded,Passes,PercentArgosLoc,MsgPerPass,DS,DI,MinPower,AvgPower,MaxPower,MinInterval,EarliestXmitTime,LatestXmitTime,XmitDays,EarliestDataTime,LatestDataTime,DataDays,ReleaseDate,ReleaseType,DeployDate
+228004,228004,UT,1.00b,82,448,79,2,983,,,,,15,07:58:51 15-Feb-2022,08:39:43 23-Jan-2023,342,07:58:51 15-Feb-2022,00:00:00 22-Jan-2023,341,,,00:00:00 07-Mar-2022

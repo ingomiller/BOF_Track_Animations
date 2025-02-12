@@ -1,0 +1,5 @@
+DeployID,Ptt,Instr,Date,Type,Quality,Latitude,Longitude,Error radius,Error Semi-major axis,Error Semi-minor axis,Error Ellipse orientation,Offset,Offset orientation,GPE MSD,GPE U,Count,Comment
+184221,184221,UT,19:32:27 14-Mar-2022,Argos,2,-23.2512,151.6941,377,1256,112,179,,,,,,
+184221,184221,UT,19:32:27 14-Mar-2022,Argos,2,-23.2512,151.6941,377,1256,112,179,,,,,,
+184221,184221,UT,19:52:31 14-Mar-2022,Argos,B,-23.2512,151.6941,713,809,627,176,,,,,,
+184221,184221,UT,11:12:25 15-Mar-2022,Argos,B,-23.4754,151.3752,3082,7746,1225,97,,,,,,

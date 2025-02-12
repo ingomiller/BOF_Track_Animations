@@ -1,0 +1,7 @@
+DeployID,Ptt,Instr,Date,Duplicates,Satellite,LocationQuality,Latitude,Longitude,Reason,Possible Timestamp,Possible Type,Byte 0,Byte 1,Byte 2,Byte 3,Byte 4,Byte 5,Byte 6,Byte 7,Byte 8,Byte 9,Byte 10,Byte 11,Byte 12,Byte 13,Byte 14,Byte 15,Byte 16,Byte 17,Byte 18,Byte 19,Byte 20,Byte 21,Byte 22,Byte 23,Byte 24,Byte 25,Byte 26,Byte 27,Byte 28,Byte 29,Byte 30,Byte 31
+79982,79982,SPOT,08:31:35 11-Sep-2015,,,,,,Temperature: 70.56,08:31:35 11-Sep-2015,Status,4,158,212,52,74,155,175,,,,,,,,,,,,,,,,,,,,,,,,,
+79982,79982,SPOT,05:11:53 17-Sep-2015,,,,,,Voltage: 1.36,05:11:53 17-Sep-2015,Status,21,171,85,90,170,170,149,,,,,,,,,,,,,,,,,,,,,,,,,
+79982,79982,SPOT,08:57:09 17-Sep-2015,,,2,-16.4445,145.8540,Voltage: 1.33,08:57:09 17-Sep-2015,Status,5,159,83,63,18,218,236,,,,,,,,,,,,,,,,,,,,,,,,,
+79982,79982,SPOT,16:24:08 05-Oct-2015,,,,,,Temperature: 68.28,16:24:08 05-Oct-2015,Status,6,160,208,54,86,3,169,,,,,,,,,,,,,,,,,,,,,,,,,
+79982,79982,SPOT,07:25:32 14-Oct-2015,,,B,-16.4165,145.7598,Temperature: -38.34,07:25:32 14-Oct-2015,Status,6,155,212,49,140,0,64,,,,,,,,,,,,,,,,,,,,,,,,,
+79982,79982,SPOT,19:21:23 18-Nov-2015,,,,,,Voltage: 3.81,19:21:23 18-Nov-2015,Status,7,163,238,204,156,13,44,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,4 @@
+DeployID,Ptt,DepthSensor,Instr,Date,LocationQuality,Latitude,Longitude,MinDepth,MinAccuracy,MinSource,MaxDepth,MaxAccuracy,MaxSource
+239052,239052,0.500000,UT,00:00:00 14-Mar-2024,,,,0.000000,0.000000,Status,,,
+239052,239052,0.500000,UT,00:00:00 22-Apr-2024,,,,0.000000,0.000000,Status,,,
+239052,239052,0.500000,UT,00:00:00 11-May-2024,,,,0.000000,0.000000,Status,,,

@@ -1,0 +1,10 @@
+DeployID,Ptt,DepthSensor,Instr,SW,RTC,Received,Time Offset,LocationQuality,Latitude,Longitude,Type,HauledOut,BrokenThermistor,BrokenLink,Transmits,BattVoltage,TransmitVoltage,TransmitCurrent,Temperature,Depth,MaxDepth,ZeroDepthOffset,LightLevel,NoDawnDusk,ReleaseType,ReleaseTime,InitiallyBroken,BurnMinutes,ReleaseDepth,FastGPSPower,TWICPower,PowerLimit,WetDry,MinWetDry,MaxWetDry,WetDryThreshold,StatusWord,TransmitPower,Resets,PreReleaseTilt,PreReleaseTiltSd,PreReleaseTiltCount,XmitQueue,FastGPSLocNumber,FastGPSFailures,BattDiscon,Tilt,S11,ReleaseWetDry,ReleaseTemperature
+184221,184221,0.500000,UT,,,10:50:25 12-Mar-2022,,,,,,,,,,,,,27.80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,,,11:21:00 12-Mar-2022,,,,,,,,,7791,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,1.00a,,11:31:16 14-Mar-2022,,,,,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,1.00a,,19:30:20 14-Mar-2022,,2,-23.2512,151.6941,,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,,,19:34:00 14-Mar-2022,,2,-23.2512,151.6941,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,,,19:52:32 14-Mar-2022,,B,-23.2512,151.6941,,,,,,,,,27.30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,,,00:31:44 18-Mar-2022,,,,,,,,,7912,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,,,05:51:53 31-Mar-2022,,,,,,,,,8052,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+184221,184221,0.500000,UT,,,22:07:57 06-Apr-2022,,,,,,,,,,,,,26.60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

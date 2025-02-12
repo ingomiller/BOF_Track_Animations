@@ -1,0 +1,2 @@
+DeployID,Ptt,Instr,SW,PercentDecoded,Passes,PercentArgosLoc,MsgPerPass,DS,DI,MinPower,AvgPower,MaxPower,MinInterval,EarliestXmitTime,LatestXmitTime,XmitDays,EarliestDataTime,LatestDataTime,DataDays,ReleaseDate,ReleaseType,DeployDate
+Barnacle Betty,222233,UT,1.00b,85,1642,96,3,4257,,,,,15,21:45:38 04-Oct-2022,20:36:03 09-Jul-2023,278,21:45:38 04-Oct-2022,00:00:00 21-Jun-2023,259,,,03:00:00 09-Oct-2022

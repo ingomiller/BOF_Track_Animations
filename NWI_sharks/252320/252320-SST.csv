@@ -1,0 +1,5 @@
+DeployID,Ptt,DepthSensor,Instr,Date,LocationQuality,Latitude,Longitude,Depth,Temperature,Source
+252320,252320,0.500000,UT,13:00:00 02-May-2024,,,,0.0,25.5,Status
+252320,252320,0.500000,UT,07:00:00 03-May-2024,,,,0.0,25.4,Status
+252320,252320,0.500000,UT,10:00:00 01-Jul-2024,,,,0.0,23.2,Status
+252320,252320,0.500000,UT,00:00:00 03-Jul-2024,,,,0.0,22.9,Status
